@@ -80,7 +80,7 @@ mkSchemaDefinitions ''SignedSchema
 mkKnownCurrencies []
 
 -- For minting policy:
-writeMintingPolicy :: Plutus.MintingPolicy -> IO (Either (FileError ()) ())
+writeMintingPolicy :: Plutus.Scripts.MintingPolicy -> IO (Either (FileError ()) ())
 writeMintingPolicy  = writeFileTextEnvelope @(PlutusScript PlutusScriptV1) "my-minting-script.plutus" Nothing . PlutusScriptSerialised . SBS.toShort . LBS.toStrict . serialise . Plutus.getMintingPolicy
 
 
