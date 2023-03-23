@@ -33,6 +33,7 @@ import           Playground.Types       (KnownCurrency (..))
 import           Prelude                (IO, Semigroup (..), Show (..), String)
 import           Text.Printf            (printf)
 import           Wallet.Emulator.Wallet
+import           Ledger.Typed.Scripts    as Plutus.Scripts
 
 {-# INLINABLE mkPolicy #-}
 -- This policy should only allow minting (or burning) of tokens if the owner of the specified PaymentPubKeyHash
